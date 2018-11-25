@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>General settings</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>kEnabled</string>
+				<key>label</key>
+				<string>Disable widget background blur</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>solidBg</string>
+				<key>label</key>
+				<string>Disable solid background</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>mtEnabled</string>
+				<key>label</key>
+				<string>Make widget completely transparent</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>iEnabled</string>
+				<key>label</key>
+				<string>Hide widgets icon</string>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string>Widget header</string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>hEnabled</string>
+				<key>label</key>
+				<string>Custom header color enabled</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>colorPickerOne</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>label</key>
+				<string>Header color</string>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string>Widget content</string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>mEnabled</string>
+				<key>label</key>
+				<string>Custom content color enabled</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>colorPickerTwo</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>label</key>
+				<string>Content color</string>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string>disable custom colors to make it work</string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>Use the slider to set the color alpha from icon</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>iconBgEnabled</string>
+				<key>label</key>
+				<string>Get color from widget's icon</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<key>key</key>
+				<string>dominantEnabled</string>
+				<key>label</key>
+				<string>Use dominant color</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSliderCell</string>
+				<key>default</key>
+				<integer>1</integer>
+				<!-- Default value of the slider -->
+				<key>defaults</key>
+				<string>com.morwi.colorfulwidgetsprefs</string>
+				<!-- entry path no extension -->
+				<key>key</key>
+				<string>bgAlpha</string>
+				<!-- Your key name here -->
+				<key>max</key>
+				<real>1</real>
+				<!-- Enter your maximum value here -->
+				<key>min</key>
+				<real>0</real>
+				<!-- Enter your minimum value here -->
+				<key>showValue</key>
+				<!-- Show the value of the slider. true or false. -->
+				<true/>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string></string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>label</key>
+				<string>Respring to apply changes!</string>
+				<key>action</key>
+				<string>respring</string>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string></string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>Created by morwi 2018</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>twitter</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+				<string>twitter.png</string>
+				<key>label</key>
+				<string>morwi</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>paypal</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+				<string>paypal.png</string>
+				<key>label</key>
+				<string>Buy me a coffee!</string>
+			</dict>
+			<dict>
+				<key>label</key>
+				<string>CREDITS</string>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>Thanks to the_casle I was able to figure out how to get the pixel color from the icon :) Icon: Bear paw from icons8.com</string>
+			</dict>
+			<dict>
+				<key>action</key>
+				<string>twitter2</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>icon</key>
+				<string>twitter.png</string>
+				<key>label</key>
+				<string>the_casle</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>Colorful Widgets</string>
+	</dict>
+</plist>

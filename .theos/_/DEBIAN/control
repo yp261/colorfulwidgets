@@ -1,0 +1,10 @@
+Package: com.morwi.colorfulwidgets
+Name: Colorful Widgets
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker
+Architecture: iphoneos-arm
+Description: Customise your widget colors!
+Maintainer: Mateusz Morawski <yp26144@gmail.com>
+Author: Mateusz Morawski <yp26144@gmail.com>
+Section: Tweaks
+Version: 0.0.5-1
+Installed-Size: 192
