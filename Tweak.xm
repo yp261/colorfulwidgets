@@ -11,6 +11,7 @@
 @property (nonatomic, assign, readwrite, getter=isHidden) BOOL hidden;
 @property (nonatomic, copy, readwrite) UIColor *backgroundColor;
 @property (nonatomic, copy, readwrite) UIImage *icon;
+@property (nonatomic, copy) NSArray *icons;
 -(void)removeFromSuperview;
 -(id) backgroundMaterialView;
 -(id) _headerContentView;
@@ -29,6 +30,14 @@ static BOOL dominantEnabled;
 static BOOL mtEnabled;
 static CGFloat bgAlpha;
 static BOOL solidBg;
+
+UIImage* getIconForPlatter(WGWidgetPlatterView* platter) {
+    if ([platter respondsToSelector:@selector(icon)])
+        return platter.icon;
+    else if (platter.icons.count > 0)
+        return platter.icons[0];
+    return nil;
+}
 
 %hook WGWidgetPlatterView
 
@@ -50,12 +59,12 @@ static BOOL solidBg;
         }
 
         if(iconBgEnabled) {
-                if (self.icon) {
+                if (getIconForPlatter(self)) {
                         if(dominantEnabled) {
                                 CCColorCube *colorCube = [[CCColorCube alloc] init];
                                 //get color from image
                                 CGFloat setAlpha = bgAlpha;
-                                UIImage *img = (UIImage *)self.icon;
+                                UIImage *img = (UIImage *)getIconForPlatter(self);
                                 UIColor *rgbBlack = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
                                 NSArray *imgColors = [colorCube extractBrightColorsFromImage:img avoidColor:rgbBlack count:4];
                                 UIColor *backColor = [imgColors[0] colorWithAlphaComponent:setAlpha];
@@ -70,7 +79,7 @@ static BOOL solidBg;
                                 CCColorCube *colorCube = [[CCColorCube alloc] init];
                                 //get color from image
                                 CGFloat setAlpha = bgAlpha;
-                                UIImage *img = (UIImage *)self.icon;
+                                UIImage *img = (UIImage *)getIconForPlatter(self);
                                 UIColor *rgbBlack = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
                                 NSArray *imgColors = [colorCube extractBrightColorsFromImage:img avoidColor:rgbBlack count:4];
                                 UIColor *backColor = [imgColors[0] colorWithAlphaComponent:setAlpha];
